@@ -1,7 +1,16 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Link } from 'react-router-dom';
 
 const redishColor = '#D63048';
+
+const animate = keyframes`
+    0% { transform: translateY(-100%); opacity: 0; }
+    60% { transform: translateY(-3%); }
+    70% { transform: translateY(3%); }
+    80% { transform: translateY(-3%); }
+    90% { transform: translateY(3%); }
+    100% { opacity: 1; }
+`;
 
 export const HeaderContainer = styled.div`
     width: 100%;
@@ -9,6 +18,7 @@ export const HeaderContainer = styled.div`
     display: flex;
     align-items: center;
     padding: 1rem;
+    animation: ${animate} 1s ease-in-out;
 `;
 
 export const LogoText = styled.h2`
