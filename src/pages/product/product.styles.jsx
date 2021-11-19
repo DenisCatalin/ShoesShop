@@ -1,11 +1,15 @@
 import styled, {keyframes} from "styled-components";
 
 import bgImage from '../../assets/bgImage.png';
-import sneakers1BG from '../../assets/sneakers1BG.png';
-import sneakers1 from '../../assets/sneakers1.png';
 
 const animateCircle = keyframes`
     from { transform: translateX(100%); }
+`;
+
+const animateText = keyframes`
+    0% { opacity: 0; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
 `;
 
 const animateParticle = keyframes`
@@ -50,14 +54,6 @@ export const ProductBackground = styled.div`
     width: 100%;
     min-height: 100vh;
     overflow: hidden;
-`;
-
-export const ProductOpacity = styled.div`
-    background-image: url(${sneakers1BG});
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    transition: 1s;
 `;
 
 export const ProductContent = styled.div`
@@ -179,6 +175,7 @@ export const ProductSizeItem = styled.button`
     outline: none;
     border-radius: 50px;
     font-size: 1.8em;
+    transition: 1s;
 
     @media screen and (max-width: 1300px) {
         font-size: 1.4em;
@@ -205,34 +202,6 @@ export const ProductCircle = styled.div`
     }
 `;
 
-export const Product = styled.div`
-    width: 100%;
-    height: 100%;
-    background-image: url(${sneakers1});
-    background-repeat: no-repeat;
-    transform: rotateZ(-15deg);
-    position: absolute;
-    top: 15%;
-    left: 48%;
-    z-index: 2;
-    animation: ${animateCircle} 2s ease;
-
-    @media screen and (max-width: 1750px) {
-        left: 40%;
-    }
-
-    @media screen and (max-width: 1300px) {
-        left: 22%;
-    }
-
-    @media screen and (max-width: 1024px) {
-        left: 18%;
-        top: 0%;
-        width: 90%;
-        height: 90%;
-    }
-`;
-
 export const ProductButtons = styled.div`
     position: absolute;
     width: 45%;
@@ -242,6 +211,7 @@ export const ProductButtons = styled.div`
     align-items: center;
     top: 83%;
     left: 45%;
+    transition: 1s;
 
     @media screen and (max-width: 1300px) {
         left: 28%;
@@ -261,6 +231,7 @@ export const ProductButtonAdd = styled.button`
     background: rgba(150, 119, 66, .5);
     cursor: pointer;
     animation: ${animateButtonAdd} 2s ease;
+    transition: 1s;
 
     @media screen and (max-width: 1300px) {
         font-size: 1.2em;
@@ -281,10 +252,69 @@ export const ProductButtonFav = styled.button`
     border: 3px solid rgba(150, 119, 66, .5);
     cursor: pointer;
     animation: ${animateButtonFav} 2s ease;
+    transition: 1s;
 
     @media screen and (max-width: 1300px) {
         font-size: 1.2em;
     }
+`;
+
+export const ProductOpacity = styled.div`
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1s;
+`;
+
+
+export const Product = styled.div`
+    width: 100%;
+    height: 100%;
+    background-image: url('');
+    background-repeat: no-repeat;
+    transform: rotateZ(-15deg);
+    position: absolute;
+    top: 12%;
+    left: 40%;
+    z-index: 2;
+    transition: 1s;
+    animation: ${animateCircle} 2s ease;
+
+    @media screen and (max-width: 1750px) {
+        left: 40%;
+    }
+
+    @media screen and (max-width: 1300px) {
+        left: 22%;
+    }
+
+    @media screen and (max-width: 1024px) {
+        left: 18%;
+        top: 0%;
+        width: 90%;
+        height: 90%;
+    }
+`;
+
+export const ProductTitle = styled.h2`
+    position: absolute;
+    color: white;
+    top: 10%;
+    left: 50%;
+    animation: ${animateText} 1s ease;
+    transition: 1s;
+`;
+
+export const ProductPrice = styled.h2`
+    position: absolute;
+    color: white;
+    top: 35%;
+    font-size: 2em;
+    z-index: 1;
+    left: 51%;
+    font-weight: bold;
+    animation: ${animateText} 1s ease;
+    transition: 1s;
 `;
 
 export const ProductParticles = styled.div`
@@ -329,4 +359,18 @@ export const ProductParticles = styled.div`
         left: 82%;
         animation: ${animateParticle} 2.5s ease;
     }
+`;
+
+export const ProductArrows = styled.div`
+    position: absolute;
+    width: 30%;
+    height: 5%;
+    font-size: 2.5em;
+    color: white;
+    top: 72%;
+    left: 52%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 5;
+    pointer-events: all;
 `;
