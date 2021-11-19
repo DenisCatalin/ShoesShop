@@ -91,12 +91,24 @@ export const ProductContentText = styled.div`
     padding: 0 6rem;
     margin-left: 5em;
     animation: ${animateTextSection} 1.4s ease;
+
+    @media screen and (max-width: 1300px) {
+        margin-left: 0;
+    }
 `;
 
 export const ProductFirstText = styled.h2`
     color: rgba(255, 255, 255, .8);
     margin-bottom: 15px;
     font-size: 2em;
+
+    @media screen and (max-width: 1300px) {
+        font-size: 1.5em;
+    }
+
+    @media screen and (max-width: 1024px) {
+        font-size: 1em;
+    }
 `;
 
 export const ProductSecondText = styled.h1`
@@ -106,12 +118,28 @@ export const ProductSecondText = styled.h1`
     font-size: 6em;
     font-weight: bold;
     text-shadow: 5px 5px 5px black;
+
+    @media screen and (max-width: 1300px) {
+        font-size: 5em;
+    }
+
+    @media screen and (max-width: 1024px) {
+        font-size: 4em;
+    }
 `;
 
 export const ProductDescription = styled.p`
     color: rgba(255, 255, 255, .6);
     font-size: 1.1em;
     font-weight: 600;
+
+    @media screen and (max-width: 1300px) {
+        font-size: 1em;
+    }
+
+    @media screen and (max-width: 1024px) {
+        font-size: .7em;
+    }
 `;
 
 export const ProductSizeContainer = styled.div`
@@ -122,6 +150,10 @@ export const ProductSizeContainer = styled.div`
     padding: 1rem;
     margin-left: 10em;
     animation: ${animateSizeContainer} 1.4s ease;
+
+    @media screen and (max-width: 1300px) {
+        margin-left: 5em;
+    }
 `;
 
 export const ProductSizeTitle = styled.h2`
@@ -147,6 +179,14 @@ export const ProductSizeItem = styled.button`
     outline: none;
     border-radius: 50px;
     font-size: 1.8em;
+
+    @media screen and (max-width: 1300px) {
+        font-size: 1.4em;
+    }
+
+    @media screen and (max-width: 1024px) {
+        font-size: 1.2em;
+    }
 `;
 
 export const ProductCircle = styled.div`
@@ -157,6 +197,12 @@ export const ProductCircle = styled.div`
     margin-right: 10em;
     position: relative;
     animation: ${animateCircle} 2s ease;
+
+    @media screen and (max-width: 1024px) {
+        width: 370px;
+        height: 370px;
+        transform: translate(30%, -15%);
+    }
 `;
 
 export const Product = styled.div`
@@ -170,6 +216,21 @@ export const Product = styled.div`
     left: 48%;
     z-index: 2;
     animation: ${animateCircle} 2s ease;
+
+    @media screen and (max-width: 1750px) {
+        left: 40%;
+    }
+
+    @media screen and (max-width: 1300px) {
+        left: 22%;
+    }
+
+    @media screen and (max-width: 1024px) {
+        left: 18%;
+        top: 0%;
+        width: 90%;
+        height: 90%;
+    }
 `;
 
 export const ProductButtons = styled.div`
@@ -181,6 +242,10 @@ export const ProductButtons = styled.div`
     align-items: center;
     top: 83%;
     left: 45%;
+
+    @media screen and (max-width: 1300px) {
+        left: 28%;
+    }
 `;
 
 export const ProductButtonAdd = styled.button`
@@ -196,6 +261,10 @@ export const ProductButtonAdd = styled.button`
     background: rgba(150, 119, 66, .5);
     cursor: pointer;
     animation: ${animateButtonAdd} 2s ease;
+
+    @media screen and (max-width: 1300px) {
+        font-size: 1.2em;
+    }
 `;
 
 export const ProductButtonFav = styled.button`
@@ -212,6 +281,10 @@ export const ProductButtonFav = styled.button`
     border: 3px solid rgba(150, 119, 66, .5);
     cursor: pointer;
     animation: ${animateButtonFav} 2s ease;
+
+    @media screen and (max-width: 1300px) {
+        font-size: 1.2em;
+    }
 `;
 
 export const ProductParticles = styled.div`

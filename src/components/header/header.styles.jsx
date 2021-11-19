@@ -22,25 +22,25 @@ export const HeaderContainer = styled.div`
 `;
 
 export const LogoText = styled.h2`
-    width: 80%;
+    width: 70%;
     font-size: 2em;
     color: white;
     cursor: pointer;
 
     @media screen and (max-width: 1450px) {
-        width: 75%;
+        width: 65%;
     }
     @media screen and (max-width: 1150px) {
-        width: 70%;
+        width: 60%;
     }
     @media screen and (max-width: 950px) {
-        width: 65%;
+        width: 55%;
     }
     @media screen and (max-width: 950px) {
-        width: 65%;
+        width: 50%;
     }
     @media screen and (max-width: 820px) {
-        width: 55%;
+        width: 45%;
     }
 `; 
 
@@ -49,25 +49,25 @@ export const SpanColor = styled.span`
 `;
 
 export const HeaderLinksContainer = styled.div`
-    width:20%;
+    width:30%;
     display:flex;
     justify-content: space-between;
     align-items:center;
 
     @media screen and (max-width: 1450px) {
-        width: 25%;
-    }
-
-    @media screen and (max-width: 1150px) {
-        width: 30%;
-    }
-
-    @media screen and (max-width: 950px) {
         width: 35%;
     }
 
-    @media screen and (max-width: 820px) {
+    @media screen and (max-width: 1150px) {
+        width: 40%;
+    }
+
+    @media screen and (max-width: 950px) {
         width: 45%;
+    }
+
+    @media screen and (max-width: 820px) {
+        width: 50%;
     }
 
     @media screen and (max-width: 660px) {
@@ -79,6 +79,13 @@ export const HeaderLink = styled(Link)`
     cursor: pointer;
     color: white;
     font-size: 1.2em;
+`;
+
+export const SignInLink = styled.h2`
+    cursor: pointer;
+    color: white;
+    font-size: 1.2em;
+    font-weight: lighter;
 `;
 
 export const HeaderMenu = styled.button`
