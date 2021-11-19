@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import { Link } from "react-router-dom";
 import bgImage from '../../assets/bgImage.png';
 import homepageBG from '../../assets/homepageBG.png';
 
@@ -176,7 +177,10 @@ export const DiscoverTextColor = styled.span`
     letter-spacing: 2px;
 `;
 
-export const HomepageButton = styled.button`
+export const HomepageButton = styled(Link)`
+    display:flex;
+    justify-content: center;
+    align-items: center;
     color: white;
     background: ${redishColor};
     position: absolute;

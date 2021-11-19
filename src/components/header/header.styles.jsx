@@ -83,7 +83,7 @@ export const HeaderLink = styled(Link)`
 
 export const HeaderMenu = styled.button`
     color: white;
-    font-size: 1.5em;
+    font-size: 2em;
     position: absolute;
     left: 90%;
     display: none;

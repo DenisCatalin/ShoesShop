@@ -15,7 +15,7 @@ const Homepage = () => {
                     <DiscoverContainer>
                         <DiscoverText><DiscoverTextColor>DISCOVER</DiscoverTextColor> OUR NEWEST COLLECTION OF <DiscoverTextColor>SNEAKERS</DiscoverTextColor></DiscoverText>
                     </DiscoverContainer>
-                    <HomepageButton>EXPLORE</HomepageButton>
+                    <HomepageButton to='/product/1'>EXPLORE</HomepageButton>
                 </HomepageHero>
             </HomepageOpacity>    
         </HomepageBackground>
