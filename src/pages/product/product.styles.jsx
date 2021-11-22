@@ -1,4 +1,4 @@
-import styled, {keyframes} from "styled-components";
+import styled, {keyframes, css} from "styled-components";
 
 import bgImage from '../../assets/bgImage.png';
 
@@ -44,6 +44,12 @@ const animateTextSection = keyframes`
 const animateSizeContainer = keyframes`
     0% { transform: translateY(100%); }
     100% { transform: translateY(0%); }
+`;
+
+const ButtonHover = css`
+    &:hover {
+        opacity: .32;
+    }
 `;
 
 export const ProductBackground = styled.div`
@@ -176,6 +182,9 @@ export const ProductSizeItem = styled.button`
     border-radius: 50px;
     font-size: 1.8em;
     transition: 1s;
+    cursor: pointer;
+    z-index: 2;
+    ${ButtonHover}
 
     @media screen and (max-width: 1300px) {
         font-size: 1.4em;
@@ -210,7 +219,7 @@ export const ProductButtons = styled.div`
     justify-content: space-between;
     align-items: center;
     top: 83%;
-    left: 45%;
+    left: 58%;
     transition: 1s;
 
     @media screen and (max-width: 1300px) {
@@ -232,6 +241,8 @@ export const ProductButtonAdd = styled.button`
     cursor: pointer;
     animation: ${animateButtonAdd} 2s ease;
     transition: 1s;
+    z-index: 3;
+    ${ButtonHover}
 
     @media screen and (max-width: 1300px) {
         font-size: 1.2em;
@@ -253,6 +264,8 @@ export const ProductButtonFav = styled.button`
     cursor: pointer;
     animation: ${animateButtonFav} 2s ease;
     transition: 1s;
+    z-index: 3;
+    ${ButtonHover}
 
     @media screen and (max-width: 1300px) {
         font-size: 1.2em;

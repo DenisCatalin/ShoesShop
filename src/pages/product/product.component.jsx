@@ -2,6 +2,8 @@ import React from 'react';
 import Header from '../../components/header/header.component';
 import { useParams, useHistory } from 'react-router-dom';
 import PRODUCTS_DATA from '../../redux/products/products.data';
+import { useDispatch } from 'react-redux';
+import { addItem } from '../../redux/cart/cart.actions';
 
 import { Product, ProductBackground, ProductContent, LeftSideContent, RightSideContent, ProductContentText, ProductDescription, ProductFirstText, 
     ProductSecondText, ProductSizeContainer, ProductSizeTitle, ProductSizeGrid, ProductSizeItem, ProductCircle, ProductButtonAdd, ProductButtonFav, ProductParticles, 
@@ -9,6 +11,7 @@ import { Product, ProductBackground, ProductContent, LeftSideContent, RightSideC
     
 const ProductPage = () => {
     const params = useParams();
+    const dispatch = useDispatch();
     const history = useHistory();
 
     const { name, imageUrl, background, price, buttonsBG, buttonsColor, circleColor } = PRODUCTS_DATA.items[params.id-1];
@@ -73,8 +76,8 @@ const ProductPage = () => {
                             <i className="fas fa-chevron-right" style={{cursor: 'pointer'}} onClick={increaseProduct}></i>
                         </ProductArrows>
                         <ProductButtons>
-                            <ProductButtonAdd style={{background: buttonsBG, color: buttonsColor}}>Add to cart</ProductButtonAdd>
-                            <ProductButtonFav style={{background: 'transparent', color: buttonsColor, border: `4px solid ${buttonsBG}`}}>Add to favourite</ProductButtonFav>
+                            <ProductButtonAdd style={{background: buttonsBG, color: buttonsColor}} onClick={() => { dispatch(addItem(params.id)); }}>Add to cart</ProductButtonAdd>
+                            {/* <ProductButtonFav style={{background: 'transparent', color: buttonsColor, border: `4px solid ${buttonsBG}`}}>Add to favourite</ProductButtonFav> */}
                         </ProductButtons>
                     </RightSideContent>
                 </ProductContent>

@@ -20,7 +20,7 @@
 */
 
 const PRODUCTS_DATA = {
-    items: [
+    sneakers: [
     {
         id: 1,
         name: ' Black and Gold Sneakers NIKE AIR',
