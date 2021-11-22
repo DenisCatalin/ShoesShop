@@ -34,6 +34,8 @@ export const HomepageBackground = styled.div`
     background-position: center;
     background-size: cover;
     width: 100%;
+    position: relative;
+    overflow: hidden;
     min-height: 100vh;
 `;
 
@@ -73,6 +75,10 @@ export const WelcomeText = styled.h1`
         font-size: 3.5em;
     }
 
+    @media screen and (max-width: 850px) and (max-height: 450px) {
+        font-size: 2em;
+    }
+
     @media screen and (max-width: 550px) {
         font-size: 3em;
     }
@@ -98,6 +104,10 @@ export const WelcomeTextColor = styled.span`
 
     @media screen and (max-width: 850px) {
         font-size: 3.5em;
+    }
+
+    @media screen and (max-width: 850px) and (max-height: 450px) {
+        font-size: 2.5em;
     }
 
     @media screen and (max-width: 550px) {
@@ -158,12 +168,27 @@ export const DiscoverText = styled.h2`
         font-size: 2.5em;
     }
 
+    @media screen and (max-width: 850px) and (max-height: 450px) {
+        width: 55%;
+        font-size: 1.5em;
+    }
+
     @media screen and (max-width: 660px) {
         font-size: 2em;
     }
 
+    @media screen and (max-width: 650px) and (max-height: 380px) {
+        width: 55%;
+        font-size: 1.3em;
+    }
+
     @media screen and (max-width: 550px) {
         font-size: 1.5em;
+    }
+
+    @media screen and (max-width: 570px) and (max-height: 330px) {
+        width: 65%;
+        font-size: 1.3em;
     }
 
     @media screen and (max-width: 360px) {
@@ -208,12 +233,29 @@ export const HomepageButton = styled(Link)`
         width: 25%;
     }
 
+    @media screen and (max-width: 850px) and (max-height: 450px) {
+        width: 25%;
+        height: 12%;
+        font-size: 1.5em;
+    }
+
     @media screen and (max-width: 700px) {
         width: 30%;
     }
 
+    @media screen and (max-width: 650px) and (max-height: 380px) {
+        width: 25%;
+        font-size: 1.3em;
+    }
+
     @media screen and (max-width: 625px) {
         font-size: 1.5em;
+    }
+
+    @media screen and (max-width: 570px) and (max-height: 330px) {
+        width: 25%;
+        font-size: 1.3em;
+        top: 85%;
     }
 
     @media screen and (max-width: 425px) {

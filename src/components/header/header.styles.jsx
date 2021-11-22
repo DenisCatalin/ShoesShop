@@ -19,6 +19,7 @@ export const HeaderContainer = styled.div`
     align-items: center;
     padding: 1rem;
     animation: ${animate} 1s ease-in-out;
+    z-index: 10;
 `;
 
 export const LogoText = styled.h2`
@@ -32,15 +33,21 @@ export const LogoText = styled.h2`
     }
     @media screen and (max-width: 1150px) {
         width: 60%;
+        font-size: 1.7em;
     }
+
+    @media screen and (max-width: 1100px) {
+        font-size: 2em;
+    }
+
     @media screen and (max-width: 950px) {
         width: 55%;
     }
     @media screen and (max-width: 950px) {
         width: 50%;
     }
-    @media screen and (max-width: 820px) {
-        width: 45%;
+    @media screen and (max-width: 840px) {
+        width: 35%;
     }
 `; 
 
@@ -54,20 +61,26 @@ export const HeaderLinksContainer = styled.div`
     justify-content: space-between;
     align-items:center;
 
+
     @media screen and (max-width: 1450px) {
         width: 35%;
     }
 
     @media screen and (max-width: 1150px) {
         width: 40%;
+        font-size: .8em;
+    }
+
+    @media screen and (max-width: 1100px) {
+        font-size: .9em;
     }
 
     @media screen and (max-width: 950px) {
         width: 45%;
     }
 
-    @media screen and (max-width: 820px) {
-        width: 50%;
+    @media screen and (max-width: 840px) {
+        width: 65%;
     }
 
     @media screen and (max-width: 660px) {
@@ -97,6 +110,7 @@ export const HeaderMenu = styled.button`
     background: none;
     border: none;
     outline: none;
+    z-index: 10;
 
     @media screen and (max-width: 660px) {
         display: initial;

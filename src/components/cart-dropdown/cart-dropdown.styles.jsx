@@ -13,21 +13,23 @@ const animate = keyframes`
 
 export const CartDropDownContainer = styled.div`
     position: absolute;
-    width: 240px;
-    height: 340px;
+    width: 350px;
+    height: 450px;
     display: flex;
     flex-direction: column;
     padding: 20px;
-    border: 1px solid black;
+    border: 3px solid black;
     background-color: white;
     top: 90px;
     right: 40px;
-    z-index: 5;
+    border-radius: 25px;
+    z-index: 15;
+    background: rgb(207, 188, 153);
     animation: ${animate} .5s;
 `;
 
 export const CartDropDownItems = styled.div`
-    height: 240px;
+    height: 370px;
     display: flex;
     flex-direction: column;
     overflow: auto;
@@ -36,4 +38,5 @@ export const CartDropDownItems = styled.div`
 export const CartDropDownMessage = styled.span`
     font-size: 18px;
     margin: 50px auto;
+    color: white;
 `;

@@ -7,10 +7,10 @@ const buttonStyles = css`
     border-radius: 50px;
 
     &:hover {
-        background-color: white;
+        background-color: rgb(207, 188, 153);
         color: black;
         border-radius: 50px;
-        border: 1px solid black;
+        border: 2px solid black;
     }
 `;
 

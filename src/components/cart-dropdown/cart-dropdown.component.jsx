@@ -5,15 +5,14 @@ import { toggleCartHidden } from '../../redux/cart/cart.actions'
 import { useHistory } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { selectCartItems } from '../../redux/cart/cart.selector'
-import PRODUCTS_DATA from '../../redux/products/products.data';
 import { CartDropDownContainer, CartDropDownItems, CartDropDownMessage } from './cart-dropdown.styles'
 
 const CartDropdown = () => {
     const cartItems = useSelector(selectCartItems);
     const dispatch = useDispatch();
     const history = useHistory();
-    
-    const { name, imageUrl, price } = PRODUCTS_DATA.items[0];
+
+    console.log(cartItems)
 
     return (
         <CartDropDownContainer>
@@ -21,7 +20,7 @@ const CartDropdown = () => {
             {
                 cartItems.length ?
                 cartItems.map(cartItem => (
-                    <CartItem key={cartItems.id} name={name} imageUrl={imageUrl} price={price} item={cartItem} />
+                    <CartItem key={cartItems.id} name={cartItem.name} imageUrl={cartItem.smallImage} price={cartItem.price} item={cartItem} />
                 ))
                 :
                 <CartDropDownMessage>Your cart is empty</CartDropDownMessage>

@@ -2,19 +2,23 @@ import React from 'react';
 import Header from '../../components/header/header.component';
 import { useParams, useHistory } from 'react-router-dom';
 import PRODUCTS_DATA from '../../redux/products/products.data';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addItem } from '../../redux/cart/cart.actions';
+import './product.styles.scss'
+import { selectNavbarHidden } from '../../redux/navbar/navbar.selectors';
+import Navbar from '../../components/navbar/navbar.component';
 
 import { Product, ProductBackground, ProductContent, LeftSideContent, RightSideContent, ProductContentText, ProductDescription, ProductFirstText, 
-    ProductSecondText, ProductSizeContainer, ProductSizeTitle, ProductSizeGrid, ProductSizeItem, ProductCircle, ProductButtonAdd, ProductButtonFav, ProductParticles, 
+    ProductSecondText, ProductSizeContainer, ProductSizeTitle, ProductSizeGrid, ProductSizeItem, ProductCircle, ProductButtonAdd, ProductParticles, 
     ProductButtons, ProductTitle, ProductPrice, ProductOpacity, ProductArrows } from './product.styles';
     
 const ProductPage = () => {
     const params = useParams();
     const dispatch = useDispatch();
     const history = useHistory();
+    const navbar = useSelector(selectNavbarHidden);
 
-    const { name, imageUrl, background, price, buttonsBG, buttonsColor, circleColor } = PRODUCTS_DATA.items[params.id-1];
+    const { name, imageUrl, background, price, buttonsBG, buttonsColor, circleColor } = PRODUCTS_DATA.sneakers[params.id-1];
 
     const increaseProduct = () => {
         if(params.id < 7) history.push(`/product/${+params.id+1}`);
@@ -28,6 +32,7 @@ const ProductPage = () => {
 
     return (
         <ProductBackground>
+            {navbar ? null : <Navbar />}
             <ProductOpacity style={{backgroundImage: `url(${background})`}}>
                 <Header />
                 <ProductContent>
@@ -59,7 +64,7 @@ const ProductPage = () => {
                         </ProductSizeContainer>
                     </LeftSideContent>
                     <RightSideContent>
-                        <Product style={{backgroundImage: `url(${imageUrl})`}}></Product>
+                        <Product><img src={imageUrl} alt={name} className='product-image'/></Product>
                         <ProductTitle>{name}</ProductTitle>
                         <ProductPrice>€{price}</ProductPrice>
                         <ProductCircle style={{background: circleColor}}>
@@ -76,8 +81,7 @@ const ProductPage = () => {
                             <i className="fas fa-chevron-right" style={{cursor: 'pointer'}} onClick={increaseProduct}></i>
                         </ProductArrows>
                         <ProductButtons>
-                            <ProductButtonAdd style={{background: buttonsBG, color: buttonsColor}} onClick={() => { dispatch(addItem(params.id)); }}>Add to cart</ProductButtonAdd>
-                            {/* <ProductButtonFav style={{background: 'transparent', color: buttonsColor, border: `4px solid ${buttonsBG}`}}>Add to favourite</ProductButtonFav> */}
+                            <ProductButtonAdd style={{background: buttonsBG, color: buttonsColor}} onClick={() => { dispatch(addItem(PRODUCTS_DATA.sneakers[params.id-1])); }}>Add to cart</ProductButtonAdd>
                         </ProductButtons>
                     </RightSideContent>
                 </ProductContent>

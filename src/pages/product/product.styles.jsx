@@ -66,11 +66,33 @@ export const ProductContent = styled.div`
     width: 100%;
     height: 90vh;
     display: flex;
+
+    @media screen and (max-width: 830px) {
+        flex-direction: column;
+    }
 `;
 
 export const LeftSideContent = styled.div`
     width: 40%;
-    height: 80vh;
+    height: 90vh;
+
+    @media screen and (max-width:1300px) {
+        transform: translateY(-10%);
+    }
+
+    @media screen and (max-width:1100px) {
+        transform: translateY(-10%);
+    }
+
+    @media screen and (max-width: 850px) and (max-height: 450px) {
+        width: 100%;
+        height: 45vh;
+    }
+
+    @media screen and (max-width: 450px) and (max-height: 850px) {
+        width: 100%;
+        height: 50vh;
+    }
 `;
 
 export const RightSideContent = styled.div`
@@ -80,11 +102,23 @@ export const RightSideContent = styled.div`
     justify-content: flex-end; 
     align-items: center;
     position: relative;
+
+    @media screen and (max-width: 850px) and (max-height: 450px) {
+        width: 100%;
+        height: 50vh;
+        justify-content: center; 
+    }
+
+    @media screen and (max-width: 450px) and (max-height: 850px) {
+        width: 100%;
+        height: 50vh;
+        justify-content: center; 
+    }
 `;
 
 export const ProductContentText = styled.div`
     width: 100%;
-    height: 60%;
+    height: 40%;
     display: flex;
     justify-content: flex-end;
     transform:translateY(-10%);
@@ -96,6 +130,16 @@ export const ProductContentText = styled.div`
 
     @media screen and (max-width: 1300px) {
         margin-left: 0;
+    }
+
+    @media screen and (max-width: 850px) and (max-height: 450px) {
+
+    }
+
+    @media screen and (max-width: 450px) and (max-height: 850px) {
+        justify-content: center; 
+        align-items: center;
+        transform: translateY(10%);
     }
 `;
 
@@ -110,6 +154,11 @@ export const ProductFirstText = styled.h2`
 
     @media screen and (max-width: 1024px) {
         font-size: 1em;
+    }
+
+    @media screen and (max-width: 450px) and (max-height: 850px) {
+        font-size: .8em;
+        margin-bottom: 0;
     }
 `;
 
@@ -128,6 +177,11 @@ export const ProductSecondText = styled.h1`
     @media screen and (max-width: 1024px) {
         font-size: 4em;
     }
+
+    @media screen and (max-width: 450px) and (max-height: 850px) {
+        font-size: 2.5em;
+        margin-bottom: 5px;
+    }
 `;
 
 export const ProductDescription = styled.p`
@@ -142,11 +196,14 @@ export const ProductDescription = styled.p`
     @media screen and (max-width: 1024px) {
         font-size: .7em;
     }
+    @media screen and (max-width:850px) {
+        text-align: center;
+    }
 `;
 
 export const ProductSizeContainer = styled.div`
     width: 100%;
-    height: 40%;
+    height: 60%;
     display: flex;
     flex-direction: column;
     padding: 1rem;
@@ -156,11 +213,19 @@ export const ProductSizeContainer = styled.div`
     @media screen and (max-width: 1300px) {
         margin-left: 5em;
     }
+
+    @media screen and (max-width:850px) {
+        margin-left: .5em;
+    }
 `;
 
 export const ProductSizeTitle = styled.h2`
     color: white;
     font-style: italic;
+
+    @media screen and (max-width: 450px) {
+        font-size: 1.25em;
+    }
 `;
 
 export const ProductSizeGrid = styled.div`
@@ -204,10 +269,22 @@ export const ProductCircle = styled.div`
     position: relative;
     animation: ${animateCircle} 2s ease;
 
+    @media screen and (max-width: 1300px) {
+        width: 400px;
+        height: 400px;
+        transform: translate(25%, -15%);
+    }
+
     @media screen and (max-width: 1024px) {
         width: 370px;
         height: 370px;
         transform: translate(30%, -15%);
+    }
+
+    @media screen and (max-width: 450px) and (max-height: 850px) {
+        width: 300px;
+        height: 250px;
+        transform: translate(33%, -5%);
     }
 `;
 
@@ -246,6 +323,22 @@ export const ProductButtonAdd = styled.button`
 
     @media screen and (max-width: 1300px) {
         font-size: 1.2em;
+        width: 60%;
+        transform: translate(90%, -50%);
+    }
+
+    @media screen and (max-width: 1024px) and (max-height: 1366px) {
+        width: 100%;
+        height: 70%;
+        font-size: 1.9em;
+        transform: translate(10%, -85%);
+    }
+
+    @media screen and (max-width: 450px) and (max-height: 850px) {
+        width: 100%;
+        height: 100%;
+        font-size: 1.5em;
+        transform: translate(0%, 0%);
     }
 `;
 
@@ -316,6 +409,28 @@ export const ProductTitle = styled.h2`
     left: 50%;
     animation: ${animateText} 1s ease;
     transition: 1s;
+
+    @media screen and (max-width: 1300px) {
+        width: 100%;
+        top: 5%;
+        left: 40%;
+        font-size: 1.25em;
+    }
+
+    @media screen and (max-width: 1300px) {
+        width: 100%;
+        top: 0%;
+        left: 32%;
+        font-size: 1.25em;
+    }
+
+    @media screen and (max-width: 450px) and (max-height: 850px) {
+        width: 60%;
+        font-size: 1em;
+        top: -5%;
+        left: 20%;
+        text-align:center;
+    }
 `;
 
 export const ProductPrice = styled.h2`
@@ -328,6 +443,23 @@ export const ProductPrice = styled.h2`
     font-weight: bold;
     animation: ${animateText} 1s ease;
     transition: 1s;
+
+    @media screen and (max-width:1300px) {
+        top: 27%;
+        left: 43%;
+    }
+
+    @media screen and (max-width:1100px) {
+        top: 20%;
+        left: 37%;
+        font-size: 1.7em;
+    }
+
+    @media screen and (max-width: 450px) and (max-height: 850px) {
+        font-size: 1.25em;
+        top: 25%;
+        left: 28%;
+    }
 `;
 
 export const ProductParticles = styled.div`
@@ -372,6 +504,11 @@ export const ProductParticles = styled.div`
         left: 82%;
         animation: ${animateParticle} 2.5s ease;
     }
+
+    @media screen and (max-width: 450px) and (max-height: 850px) {
+        width: 30px;
+        height: 30px;
+    }
 `;
 
 export const ProductArrows = styled.div`
@@ -386,4 +523,22 @@ export const ProductArrows = styled.div`
     justify-content: space-between;
     z-index: 5;
     pointer-events: all;
+
+    @media screen and (max-width: 1300px) {
+        width: 45%;
+        top: 80%;
+        left: 43%;
+    }
+
+    @media screen and (max-width: 1024px) and (max-height: 1366px) {
+        width: 60%;
+        top: 80%;
+        left: 25%;
+    }
+
+    @media screen and (max-width: 450px) and (max-height: 850px) {
+        width: 95%;
+        top: 82%;
+        left: 2.5%;
+    }
 `;

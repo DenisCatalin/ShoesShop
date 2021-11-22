@@ -6,6 +6,8 @@ import { connect, useSelector } from 'react-redux';
 import { setCurrentUser } from '../../redux/user/user.actions'
 import { createStructuredSelector } from 'reselect';
 import { selectCurrentUser } from '../../redux/user/user.selector';
+import { selectNavbarHidden } from '../../redux/navbar/navbar.selectors';
+import Navbar from '../../components/navbar/navbar.component';
 
 const Homepage = ({ setCurrentUser }) => {
     
@@ -30,9 +32,11 @@ const Homepage = ({ setCurrentUser }) => {
         });
     }, [setCurrentUser, user]);
 
+    const navbar = useSelector(selectNavbarHidden);
 
     return (
         <HomepageBackground>
+            {navbar ? null : <Navbar />}
             <HomepageOpacity>
                 <Header />
                 <HomepageHero>

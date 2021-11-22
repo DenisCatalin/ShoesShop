@@ -1,31 +1,11 @@
-/*
-    BACKGROUND:
-    https://ibb.co/dcbqDYZ https://i.ibb.co/VNHZT46/sneakers1-BG.png
-    https://ibb.co/wStvBfC https://i.ibb.co/wStvBfC/sneakers2-BG.png
-    https://ibb.co/5T5QD4f https://i.ibb.co/8Mjy3sS/sneakers3-BG.png
-    https://ibb.co/5T5QD4f https://i.ibb.co/8Mjy3sS/sneakers3-BG.png
-    https://ibb.co/FmhbgPb https://ibb.co/FmhbgPb/sneakers5-BG.png
-    https://ibb.co/30Tw1wp https://ibb.co/30Tw1wp/sneakers6-BG.png
-    https://ibb.co/X56DsTY https://i.ibb.co/ykKpyJ4/sneakers7-BG.png
-
-
-    PRODUCTS: 
-    https://ibb.co/9s4zGV0 https://i.ibb.co/2gMm5sr/sneakers1.png
-    https://ibb.co/NLNSbG1 https://i.ibb.co/y8kS7xh/sneakers2.png
-    https://ibb.co/ZmC8chd https://i.ibb.co/zJwRPSs/sneakers3.png https://i.ibb.co/8Mjy3sS/sneakers3-BG.png
-    https://ibb.co/tPgm1YY https://i.ibb.co/0VTDzYY/sneakers4.png
-    https://ibb.co/4pTR9nJ https://i.ibb.co/cQFhMSx/sneakers5.png
-    https://ibb.co/z2k5BtS https://i.ibb.co/6tdZTq4/sneakers6.png
-    https://ibb.co/kBRVf9g https://i.ibb.co/zxyWY7h/sneakers7.png
-*/
-
 const PRODUCTS_DATA = {
     sneakers: [
     {
         id: 1,
         name: ' Black and Gold Sneakers NIKE AIR',
-        imageUrl: 'https://i.ibb.co/2gMm5sr/sneakers1.png',
+        imageUrl: 'https://i.ibb.co/CKQB9gp/item1.png',
         background: 'https://i.ibb.co/VNHZT46/sneakers1-BG.png',
+        smallImage: 'https://i.ibb.co/LdVY8FX/item1small.png',
         buttonsBG: 'rgba(150, 119, 66, .8)',
         buttonsColor: '#BBBBBB',
         circleColor: 'rgba(150, 119, 66, .5)',
@@ -34,8 +14,9 @@ const PRODUCTS_DATA = {
     {
         id: 2,
         name: 'Red and Black Sneakers NIKE AIR',
-        imageUrl: 'https://i.ibb.co/y8kS7xh/sneakers2.png',
+        imageUrl: 'https://i.ibb.co/sW63PsX/item2.png',
         background: 'https://i.ibb.co/8Mjy3sS/sneakers3-BG.png',
+        smallImage: 'https://i.ibb.co/yY9y0fs/item2small.png',
         buttonsBG: 'rgba(2, 2, 2, .8)',
         buttonsColor: 'rgba(171, 25, 35, 1)',
         circleColor: 'rgba(171, 25, 35, .8)',
@@ -44,8 +25,9 @@ const PRODUCTS_DATA = {
     {
         id: 3,
         name: 'Red and White Sneakers NIKE AIR',
-        imageUrl: 'https://i.ibb.co/zJwRPSs/sneakers3.png',
-        background: 'https://i.ibb.co/8Mjy3sS/sneakers3-BG.png', 
+        imageUrl: 'https://i.ibb.co/3c66HNH/item3.png',
+        background: 'https://i.ibb.co/8Mjy3sS/sneakers3-BG.png',
+        smallImage: 'https://i.ibb.co/6Zpg8n7/item3small.png',
         buttonsBG: 'white',
         buttonsColor: 'rgba(214, 48, 72, 1)',
         circleColor: 'rgba(214, 48, 72, .8)',
@@ -54,8 +36,9 @@ const PRODUCTS_DATA = {
     {
         id: 4,
         name: 'Blue and White Sneakers NIKE AIR',
-        imageUrl: 'https://i.ibb.co/0VTDzYY/sneakers4.png',
+        imageUrl: 'https://i.ibb.co/SQ6481W/item4.png',
         background: 'https://i.ibb.co/PckSFd4/sneakers2-BG.png',
+        smallImage: 'https://i.ibb.co/fSwgGRH/item4small.png',
         buttonsBG: 'rgba(68, 86, 166, 1)',
         buttonsColor: 'white',
         circleColor: 'rgba(68, 86, 166, .8)',
@@ -64,8 +47,9 @@ const PRODUCTS_DATA = {
     {
         id: 5,
         name: 'Yellow Sneakers NIKE AIR',
-        imageUrl: 'https://i.ibb.co/cQFhMSx/sneakers5.png',
-        background: 'https://i.ibb.co/5G1WB7W/sneakers5-BG.png', 
+        imageUrl: 'https://i.ibb.co/T4xVxch/item5.png',
+        background: 'https://i.ibb.co/5G1WB7W/sneakers5-BG.png',
+        smallImage: 'https://i.ibb.co/r0Q1tbq/item5small.png',
         buttonsBG: 'white',
         buttonsColor: 'rgba(242, 170, 24, 1)',
         circleColor: 'rgba(242, 170, 24, .8)',
@@ -74,8 +58,9 @@ const PRODUCTS_DATA = {
     {
         id: 6,
         name: 'Purple Sneakers NIKE AIR',
-        imageUrl: 'https://i.ibb.co/6tdZTq4/sneakers6.png',
-        background: 'https://i.ibb.co/Q6JZ9ZP/sneakers6-BG.png', 
+        imageUrl: 'https://i.ibb.co/w4sWBzX/item6.png',
+        background: 'https://i.ibb.co/Q6JZ9ZP/sneakers6-BG.png',
+        smallImage: 'https://i.ibb.co/grfF8KV/item6small.png',
         buttonsBG: 'rgba(64, 55, 163, 1)',
         buttonsColor: 'white',
         circleColor: 'rgba(64, 55, 163, .8)',
@@ -84,8 +69,9 @@ const PRODUCTS_DATA = {
     {
         id: 7,
         name: 'Lime Green Sneakers NIKE AIR',
-        imageUrl: 'https://i.ibb.co/zxyWY7h/sneakers7.png',
-        background: 'https://i.ibb.co/cC2BNXw/sneakers7-BG.png', 
+        imageUrl: 'https://i.ibb.co/f9Z1Mts/item7.png',
+        background: 'https://i.ibb.co/cC2BNXw/sneakers7-BG.png',
+        smallImage: 'https://i.ibb.co/YD3XKKf/item7small.png',
         buttonsBG: 'rgba(193, 255, 34, 1)',
         buttonsColor: 'black',
         circleColor: 'rgba(0, 0, 0, .8)',
