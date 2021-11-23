@@ -67,7 +67,7 @@ export const ProductContent = styled.div`
     height: 90vh;
     display: flex;
 
-    @media screen and (max-width: 830px) {
+    @media screen and (max-width: 550px) {
         flex-direction: column;
     }
 `;
@@ -75,6 +75,7 @@ export const ProductContent = styled.div`
 export const LeftSideContent = styled.div`
     width: 40%;
     height: 90vh;
+    transform: translateY(-5%);
 
     @media screen and (max-width:1300px) {
         transform: translateY(-10%);
@@ -85,8 +86,8 @@ export const LeftSideContent = styled.div`
     }
 
     @media screen and (max-width: 850px) and (max-height: 450px) {
-        width: 100%;
-        height: 45vh;
+        width: 50%;
+        height: 90vh;
     }
 
     @media screen and (max-width: 450px) and (max-height: 850px) {
@@ -104,8 +105,8 @@ export const RightSideContent = styled.div`
     position: relative;
 
     @media screen and (max-width: 850px) and (max-height: 450px) {
-        width: 100%;
-        height: 50vh;
+        width: 50%;
+        height: 90vh;
         justify-content: center; 
     }
 
@@ -118,7 +119,7 @@ export const RightSideContent = styled.div`
 
 export const ProductContentText = styled.div`
     width: 100%;
-    height: 40%;
+    height: 45%;
     display: flex;
     justify-content: flex-end;
     transform:translateY(-10%);
@@ -133,7 +134,7 @@ export const ProductContentText = styled.div`
     }
 
     @media screen and (max-width: 850px) and (max-height: 450px) {
-
+        
     }
 
     @media screen and (max-width: 450px) and (max-height: 850px) {
@@ -144,6 +145,7 @@ export const ProductContentText = styled.div`
 `;
 
 export const ProductFirstText = styled.h2`
+    width: 100%;
     color: rgba(255, 255, 255, .8);
     margin-bottom: 15px;
     font-size: 2em;
@@ -156,9 +158,28 @@ export const ProductFirstText = styled.h2`
         font-size: 1em;
     }
 
+    @media screen and (max-width: 1280px) and (max-height: 670px) {
+        display: none;
+    }
+
+    @media screen and (max-width: 850px) and (max-height: 450px) {
+        font-size: 1em;
+        margin-bottom: 0;
+    }
+
+    @media screen and (max-width: 670px) and (max-height: 375px) {
+        font-size: .65em;
+        width: 100%;
+    }
+
     @media screen and (max-width: 450px) and (max-height: 850px) {
         font-size: .8em;
         margin-bottom: 0;
+    }
+
+    @media screen and (max-width: 375px) and (max-height: 670px) {
+        font-size: .65em;
+        width: 100%;
     }
 `;
 
@@ -178,9 +199,19 @@ export const ProductSecondText = styled.h1`
         font-size: 4em;
     }
 
+    @media screen and (max-width: 850px) and (max-height: 450px) {
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+
     @media screen and (max-width: 450px) and (max-height: 850px) {
         font-size: 2.5em;
         margin-bottom: 5px;
+    }
+
+    @media screen and (max-width: 375px) and (max-height: 670px) {
+        font-size: 1.5em;
+        width: 100%;
     }
 `;
 
@@ -196,8 +227,23 @@ export const ProductDescription = styled.p`
     @media screen and (max-width: 1024px) {
         font-size: .7em;
     }
+
+    @media screen and (max-width: 850px) and (max-height: 450px) {
+        font-size: .7em;
+        margin-bottom: 0;
+    }
+
     @media screen and (max-width:850px) {
         text-align: center;
+    }
+
+    @media screen and (max-width: 670px) and (max-height: 375px) {
+        display: none;
+    }
+
+    @media screen and (max-width: 375px) and (max-height: 670px) {
+        font-size: .5em;
+        width: 100%;
     }
 `;
 
@@ -217,6 +263,10 @@ export const ProductSizeContainer = styled.div`
     @media screen and (max-width:850px) {
         margin-left: .5em;
     }
+
+    @media screen and (max-width: 375px) and (max-height: 670px) {
+        height: 70%;
+    }
 `;
 
 export const ProductSizeTitle = styled.h2`
@@ -226,10 +276,14 @@ export const ProductSizeTitle = styled.h2`
     @media screen and (max-width: 450px) {
         font-size: 1.25em;
     }
+
+    @media screen and (max-width: 360px) {
+        font-size: 1em;
+    }
 `;
 
 export const ProductSizeGrid = styled.div`
-    width:100%;
+    width: 100%;
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -239,8 +293,8 @@ export const ProductSizeGrid = styled.div`
 export const ProductSizeItem = styled.button`
     color: #BBBBBB;
     background: #967742;
-    width: 80%;
-    height: 60%;
+    width: 70%;
+    height: 40%;
     gap: 10ch;
     border: none;
     outline: none;
@@ -257,6 +311,20 @@ export const ProductSizeItem = styled.button`
 
     @media screen and (max-width: 1024px) {
         font-size: 1.2em;
+    }
+
+    @media screen and (max-width: 850px) and (max-height: 450px) {
+        height: 60%;
+        font-size: 1.1em;
+    }
+
+    @media screen and (max-width: 670px) and (max-height: 375px) {
+        font-size: .8em;
+    }
+
+    @media screen and (max-width: 375px) and (max-height: 670px) {
+        height: 60%;
+        font-size: .9em;
     }
 `;
 
@@ -281,10 +349,28 @@ export const ProductCircle = styled.div`
         transform: translate(30%, -15%);
     }
 
+    @media screen and (max-width: 850px) and (max-height: 450px) {
+        width: 250px;
+        height: 250px;
+        transform: translate(33%, -12%);
+    }
+
+    @media screen and (max-width: 670px) and (max-height: 375px) {
+        width: 300px;
+        height: 120px;
+        transform: translate(70%, -12%);
+    }
+
     @media screen and (max-width: 450px) and (max-height: 850px) {
         width: 300px;
         height: 250px;
         transform: translate(33%, -5%);
+    }
+
+    @media screen and (max-width: 375px) and (max-height: 670px) {
+        width: 310px;
+        height: 150px;
+        transform: translate(50%, -5%);
     }
 `;
 
@@ -301,6 +387,24 @@ export const ProductButtons = styled.div`
 
     @media screen and (max-width: 1300px) {
         left: 28%;
+    }
+
+    @media screen and (max-width: 850px) and (max-height: 450px) {
+        height: 15%;
+        top: 85%;
+    }
+
+    @media screen and (max-width: 670px) and (max-height: 375px) {
+        height: 20%;
+        width: 50%;
+        top: 87%;
+        left: 26%;
+        font-size: .8em;
+    }
+
+    @media screen and (max-width: 375px) and (max-height: 670px) {
+        height: 15%;
+        top: 81%;
     }
 `;
 
@@ -332,6 +436,11 @@ export const ProductButtonAdd = styled.button`
         height: 70%;
         font-size: 1.9em;
         transform: translate(10%, -85%);
+    }
+
+    @media screen and (max-width: 850px) and (max-height: 450px) {
+        font-size: 1.5em;
+        transform: translate(2%, -95%);
     }
 
     @media screen and (max-width: 450px) and (max-height: 850px) {
@@ -424,12 +533,29 @@ export const ProductTitle = styled.h2`
         font-size: 1.25em;
     }
 
+    @media screen and (max-width: 850px) and (max-height: 450px) {
+        font-size: 1em;
+        top: 0%;
+        left: 15%;
+    }
+
+    @media screen and (max-width: 670px) and (max-height: 375px) {
+        font-size: .8em;
+        top: 0%;
+        left: 12%;
+    }
+
     @media screen and (max-width: 450px) and (max-height: 850px) {
         width: 60%;
         font-size: 1em;
         top: -5%;
         left: 20%;
         text-align:center;
+    }
+
+    @media screen and (max-width: 375px) and (max-height: 670px) {
+        font-size: .85em;
+        top: 0;
     }
 `;
 
@@ -455,10 +581,28 @@ export const ProductPrice = styled.h2`
         font-size: 1.7em;
     }
 
+    @media screen and (max-width: 850px) and (max-height: 450px) {
+        font-size: 1.25em;
+        top: 19%;
+        left: 28%;
+    }
+
+    @media screen and (max-width: 670px) and (max-height: 375px) {
+        font-size: .9em;
+        top: 25%;
+        left: 25%;
+    }
+
     @media screen and (max-width: 450px) and (max-height: 850px) {
         font-size: 1.25em;
         top: 25%;
         left: 28%;
+    }
+
+    @media screen and (max-width: 375px) and (max-height: 670px) {
+        font-size: .85em;
+        top: 30%;
+        left: 29%;
     }
 `;
 
@@ -505,9 +649,22 @@ export const ProductParticles = styled.div`
         animation: ${animateParticle} 2.5s ease;
     }
 
+    @media screen and (max-width: 850px) and (max-height: 450px) {
+        width: 30px;
+        height: 30px;
+    }
+
     @media screen and (max-width: 450px) and (max-height: 850px) {
         width: 30px;
         height: 30px;
+    }
+
+    @media screen and (max-width: 670px) and (max-height: 375px) {
+        display: none;
+    }
+
+    @media screen and (max-width: 375px) and (max-height: 670px) {
+        display: none;
     }
 `;
 
@@ -534,6 +691,16 @@ export const ProductArrows = styled.div`
         width: 60%;
         top: 80%;
         left: 25%;
+    }
+
+    @media screen and (max-width: 1024px) and (max-height: 1366px) {
+        top: 77%;
+        left: 21%;
+    }
+
+    @media screen and (max-width: 670px) and (max-height: 375px) {
+        width: 80%;
+        left: 12%;
     }
 
     @media screen and (max-width: 450px) and (max-height: 850px) {

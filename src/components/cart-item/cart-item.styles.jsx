@@ -8,6 +8,7 @@ export const CartItemContainer = styled.div`
     padding: 5px;
     border-bottom: 2px solid rgba(0, 0, 0, .1);
 
+
     @media screen and (max-width: 450px) {
         font-size: .8em;
     }
@@ -35,4 +36,5 @@ export const CartItemFontSizeText = styled.span`
     @media screen and (max-width: 450px) {
         font-size: 1em;
     }
+
 `;

@@ -45,6 +45,10 @@ export const CheckoutItemRemoveButton = styled.div`
 export const CheckoutItemSpaceBetweenElements = styled.span`
     width: 24%;
     font-size: 1em;
+
+    @media screen and (max-width: 1280px) and (max-height: 664px) {
+        font-size: .7em;
+    }
 `;
 
 export const QuantityContainer = styled.span`

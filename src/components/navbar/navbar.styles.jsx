@@ -18,12 +18,21 @@ export const NavbarContainer = styled.div`
     align-items: center;
     flex-direction: column;
     text-align: center;
+
+    @media screen and (max-width: 850px) and (max-height: 450px) {
+        width: 35%;
+        left: 65%;
+    }
 `;
 
 export const HeaderLink = styled(Link)`
     cursor: pointer;
     color: white;
     font-size: 1.2em;
+
+    @media screen and (max-width: 670px) and (max-height: 375px) {
+        font-size: 1em;
+    }
 `;
 
 export const SignInLink = styled.h2`
@@ -31,4 +40,8 @@ export const SignInLink = styled.h2`
     color: white;
     font-size: 1.2em;
     font-weight: lighter;
+
+    @media screen and (max-width: 670px) and (max-height: 375px) {
+        font-size: 1em;
+    }
 `;

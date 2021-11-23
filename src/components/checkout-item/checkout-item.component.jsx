@@ -9,7 +9,7 @@ const CheckoutItem = ({ cartItem }) => {
     return (
         <CheckoutItemContainer>
             <CheckoutItemImageContainer>
-                <img src={imageUrl} alt="item" style={{width: '80%', height: '100%'}} />
+                <img src={imageUrl} alt="item" style={{width: '80%', height: '100%', transform: 'scaleX(-1)'}} />
             </CheckoutItemImageContainer>
             <CheckoutItemSpaceBetweenElements>{name}</CheckoutItemSpaceBetweenElements>
             <QuantityContainer>

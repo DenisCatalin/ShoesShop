@@ -26,6 +26,24 @@ export const CartDropDownContainer = styled.div`
     z-index: 15;
     background: rgb(207, 188, 153);
     animation: ${animate} .5s;
+
+    @media screen and (max-width: 850px) and (max-height: 450px) {
+        width: 350px;
+        height: 370px;  
+        transform: translate(-80%, -20%);
+    }
+
+    @media screen and (max-width: 670px) and (max-height: 375px) {
+        width: 360px;
+        height: 320px;
+        transform: translate(-45%, -28%);
+    }
+
+    @media screen and (max-width: 375px) and (max-height: 670px) {
+        width: 320px;
+        height: 380px;
+        transform: translate(12%, -10%);
+    }
 `;
 
 export const CartDropDownItems = styled.div`
