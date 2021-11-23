@@ -1,6 +1,11 @@
 .product-image {
     width: 55%;
 
+    @media screen and (max-width: 1560px) and (max-height: 750px) {
+        width: 60%;
+        transform: translate(-15%, -10%)
+    }
+
     @media screen and (max-width: 1300px) {
         width: 70%;
         transform: translate(15%, 5%)

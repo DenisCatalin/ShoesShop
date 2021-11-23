@@ -150,6 +150,10 @@ export const ProductFirstText = styled.h2`
     margin-bottom: 15px;
     font-size: 2em;
 
+    @media screen and (max-width: 1550px) and (max-height: 750px) {
+        font-size: 1em;
+    }
+
     @media screen and (max-width: 1300px) {
         font-size: 1.5em;
     }
@@ -191,6 +195,10 @@ export const ProductSecondText = styled.h1`
     font-weight: bold;
     text-shadow: 5px 5px 5px black;
 
+    @media screen and (max-width: 1550px) and (max-height: 750px) {
+        font-size: 4.5em;
+    }
+
     @media screen and (max-width: 1300px) {
         font-size: 5em;
     }
@@ -219,6 +227,10 @@ export const ProductDescription = styled.p`
     color: rgba(255, 255, 255, .6);
     font-size: 1.1em;
     font-weight: 600;
+
+    @media screen and (max-width: 1550px) and (max-height: 750px) {
+        font-size: .9em;
+    }
 
     @media screen and (max-width: 1300px) {
         font-size: 1em;
@@ -385,6 +397,13 @@ export const ProductButtons = styled.div`
     left: 58%;
     transition: 1s;
 
+    @media screen and (max-width: 1550px) and (max-height: 750px) {
+        width: 55%;
+        left: 48.5%;
+        top: 89%;
+        height: 8%;
+    }
+
     @media screen and (max-width: 1300px) {
         left: 28%;
     }
@@ -519,6 +538,12 @@ export const ProductTitle = styled.h2`
     animation: ${animateText} 1s ease;
     transition: 1s;
 
+    @media screen and (max-width: 1550px) and (max-height: 750px) {
+        font-size: 1.25em;
+        left: 37%;
+        top: 5%;
+    }
+
     @media screen and (max-width: 1300px) {
         width: 100%;
         top: 5%;
@@ -569,6 +594,12 @@ export const ProductPrice = styled.h2`
     font-weight: bold;
     animation: ${animateText} 1s ease;
     transition: 1s;
+
+    @media screen and (max-width: 1550px) and (max-height: 750px) {
+        font-size: 2em;
+        left: 40%;
+        top: 32%;
+    }
 
     @media screen and (max-width:1300px) {
         top: 27%;
@@ -680,6 +711,12 @@ export const ProductArrows = styled.div`
     justify-content: space-between;
     z-index: 5;
     pointer-events: all;
+
+    @media screen and (max-width: 1550px) and (max-height: 750px) {
+        width: 35%;
+        top: 90%;
+        left: 42%;
+    }
 
     @media screen and (max-width: 1300px) {
         width: 45%;
