@@ -23,17 +23,17 @@ const Header = () => {
     }, [currentUser])
     return (
         <HeaderContainer>
-            <LogoText onClick={() => { history.push('/'); dispatch(toggleNavbarHidden()); }}>St<SpanColor>o</SpanColor>re<SpanColor>.</SpanColor></LogoText>
+            <LogoText onClick={() => { history.push('/'); }}>St<SpanColor>o</SpanColor>re<SpanColor>.</SpanColor></LogoText>
             <HeaderLinksContainer>
-                <HeaderLink to ='/product/1' onClick={() => { dispatch(toggleNavbarHidden()); } }>SHOP</HeaderLink>
-                <HeaderLink to ='/' onClick={() => { dispatch(toggleNavbarHidden()); } }>CONTACT</HeaderLink>
+                <HeaderLink to ='/product/1'>SHOP</HeaderLink>
+                <HeaderLink to ='/'>CONTACT</HeaderLink>
                 <SignInLink onClick={currentUser ? () => auth.signOut() : signInWithGoogle}>{currentUser ? userName : 'SIGN IN'}</SignInLink>
                 <CartIcon />
             </HeaderLinksContainer>
             {hidden ? null : <CartDropdown />}
             {navbar ? 
             <HeaderMenu onClick={() => { dispatch(toggleNavbarHidden()); } }><i className="fas fa-bars"></i></HeaderMenu> : 
-            <HeaderMenu onClick={() => { dispatch(toggleNavbarHidden()); } }><i className="fas fa-times"></i></HeaderMenu>}
+            <HeaderMenu onClick={() => { dispatch(toggleNavbarHidden()); } }><i className="fas fa-times"></i></HeaderMenu> }
         </HeaderContainer>
     )
 }
