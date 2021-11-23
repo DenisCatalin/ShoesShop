@@ -110,7 +110,7 @@ export const HeaderMenu = styled.button`
     background: none;
     border: none;
     outline: none;
-    z-index: 10;
+    z-index: 100;
 
     @media screen and (max-width: 660px) {
         display: initial;

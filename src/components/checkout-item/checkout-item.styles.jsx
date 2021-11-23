@@ -15,7 +15,7 @@ export const CheckoutItemContainer = styled.div`
     display: flex;
     min-height: 100px;
     border-bottom: 1px solid darkgrey;
-    padding: 15px 0;
+    padding: 15px;
     font-size: 20px;
     align-items: center;
     animation: ${animate} 1s;
@@ -36,6 +36,10 @@ export const CheckoutItemRemoveButton = styled.div`
     padding-left: 12px;
     cursor: pointer;
     animation: ${reveal} 1.4s;
+
+    @media screen and (max-width: 450px) {
+        font-size: 2em;
+    }
 `;
 
 export const CheckoutItemSpaceBetweenElements = styled.span`
@@ -46,6 +50,10 @@ export const CheckoutItemSpaceBetweenElements = styled.span`
 export const QuantityContainer = styled.span`
     display:flex;
     width: 25%;
+
+    @media screen and (max-width: 450px) {
+        width: 20%;
+    }
 `;
 
 export const CheckoutItemArrow = styled.div`

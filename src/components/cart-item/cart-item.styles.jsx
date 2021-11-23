@@ -23,7 +23,7 @@ export const CartItemDetails = styled.div`
     color: black;
 
     @media screen and (max-width: 450px) {
-        font-size: .5em;
+        font-size: .8em;
     }
 `;
 
@@ -33,6 +33,6 @@ export const CartItemFontSizeText = styled.span`
     font-weight: 100;
 
     @media screen and (max-width: 450px) {
-        font-size: .5em;
+        font-size: 1em;
     }
 `;

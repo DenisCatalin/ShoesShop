@@ -33,6 +33,10 @@ export const CheckoutPageHeader = styled.div`
     justify-content: space-between;
     border-bottom: 1px solid darkgrey;
     color: white;
+
+    @media screen and (max-width: 450px) {
+        font-size: .8em;
+    }
     
 `;
 
@@ -60,5 +64,4 @@ export const CheckoutPageTotal = styled.div`
     margin-left: auto;
     font-size: 36px;
     color: white;
-    
 `;

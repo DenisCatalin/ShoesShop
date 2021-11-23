@@ -5,14 +5,18 @@ import { selectCartItems, selectCartTotal } from '../../redux/cart/cart.selector
 import CheckoutItem from '../../components/checkout-item/checkout-item.component'
 import StripeCheckoutButton from '../../components/stripe-button/stripe-button.component'
 import Header from '../../components/header/header.component'
+import { selectNavbarHidden } from '../../redux/navbar/navbar.selectors';
+import Navbar from '../../components/navbar/navbar.component';
 
 const CheckoutPage = () => {
     const cartItems = useSelector(selectCartItems);
     const cartTotal = useSelector(selectCartTotal);
+    const navbar = useSelector(selectNavbarHidden);
     return (
         <CheckoutPageContainer>
             <Header />
             <CheckoutMainPageContainer>
+                {navbar ? null : <Navbar />}
                 <CheckoutPageHeader>
                     <CheckoutHeaderSpacing>
                         <span>Product</span>
